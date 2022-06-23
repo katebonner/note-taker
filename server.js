@@ -1,5 +1,5 @@
 const express = require('express');
-const {animals} = require('./data/animals.json')
+const {notes} = require('./data/notes')
 const app = express();
 const PORT = process.env.PORT || 3001;
 
