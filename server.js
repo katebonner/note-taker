@@ -58,13 +58,19 @@ app.post('*', (req, res) => {
     }
 });
 
-// app.delete('/api/notes/:id', (req, res) => {
-//     const noteId = req.params.id;
-    
-//     for (let i = 0; i < reviews.length; i++) {
-//         const currentNote = req.body
-//     }
-// })
+app.delete('/api/notes/:id', (req, res) => {
+    const noteId = req.params.id;
+    console.log(notesList);
+    for (let i = 0; i < notesList.length; i++) {
+        const note = notesList[i];
+        console.log(notesList[i])
+        if (note.id === noteId) {
+            const index = notesList.findIndex;
+            notesList.splice(index, 1);
+            fs.writeFileSync(path.join(__dirname, './data/notes.json'), JSON.stringify(notesList));
+        }
+    }
+})
 
 app.listen(PORT, () => {
     console.log(`SERVER LISTENING ON PORT ${PORT}`)
