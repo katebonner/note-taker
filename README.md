@@ -9,6 +9,9 @@ This web application leverages express.js to save and collect notes written by t
 
 ![notes list](./public/assets/notess.png)
 
+To view cloud hosted application, navigate here:
+https://radiant-cliffs-77191.herokuapp.com/
+
 
 ## Table of Contents 
 
